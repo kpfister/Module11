@@ -12,6 +12,8 @@ class Timer: NSObject {
     
     var timeRemaining: NSTimeInterval?// This is optional so it doesnt start unless the timer is started.
     
+    var delegate: TimerDelegate?
+    
     var isOn: Bool { // This is a computed property
         if timeRemaining != nil {
             return true // if time remaining is not equal to zer0 - its on
@@ -33,10 +35,10 @@ class Timer: NSObject {
             self.timeRemaining = timeRemaining - 1 // decreaseing the timer by 1 sec
             performSelector(#selector(Timer.secondTick), withObject: nil, afterDelay: 1)
             // ^ this is from Objective C. We need this to have the timer use acutal seconds
-            NSNotificationCenter.defaultCenter().postNotificationName("secondTick", object: nil)
+            delegate?.timerSecondTick()
         } else {
             self.timeRemaining = nil // If the timer is 0 set the time remaining to Nil
-            NSNotificationCenter.defaultCenter().postNotificationName("timerCompleted", object: nil)
+            delegate?.timerCompleted()
         }
     }
     
@@ -50,7 +52,13 @@ class Timer: NSObject {
     func stopTimer() {
         if isOn {
             timeRemaining = nil
-            NSNotificationCenter.defaultCenter().postNotificationName("timerStopped", object: nil)
+//            NSNotificationCenter.defaultCenter().postNotificationName("timerStopped", object: nil)
+            delegate?.timerStopped()
         }
     }
+}
+protocol TimerDelegate {
+    func timerSecondTick()
+    func timerCompleted()
+    func timerStopped()
 }
