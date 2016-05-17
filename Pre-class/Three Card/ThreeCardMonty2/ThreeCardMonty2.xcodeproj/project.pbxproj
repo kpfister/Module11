@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		754580D81CEB5B3E0071F509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754580D71CEB5B3E0071F509 /* AppDelegate.swift */; };
+		754580DA1CEB5B3E0071F509 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754580D91CEB5B3E0071F509 /* ViewController.swift */; };
+		754580DD1CEB5B3E0071F509 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754580DB1CEB5B3E0071F509 /* Main.storyboard */; };
+		754580DF1CEB5B3E0071F509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 754580DE1CEB5B3E0071F509 /* Assets.xcassets */; };
+		754580E21CEB5B3E0071F509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754580E01CEB5B3E0071F509 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		754580D41CEB5B3E0071F509 /* ThreeCardMonty2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeCardMonty2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		754580D71CEB5B3E0071F509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		754580D91CEB5B3E0071F509 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		754580DC1CEB5B3E0071F509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		754580DE1CEB5B3E0071F509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		754580E11CEB5B3E0071F509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		754580E31CEB5B3E0071F509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		754580D11CEB5B3E0071F509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		754580CB1CEB5B3E0071F509 = {
+			isa = PBXGroup;
+			children = (
+				754580D61CEB5B3E0071F509 /* ThreeCardMonty2 */,
+				754580D51CEB5B3E0071F509 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		754580D51CEB5B3E0071F509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				754580D41CEB5B3E0071F509 /* ThreeCardMonty2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		754580D61CEB5B3E0071F509 /* ThreeCardMonty2 */ = {
+			isa = PBXGroup;
+			children = (
+				754580D71CEB5B3E0071F509 /* AppDelegate.swift */,
+				754580D91CEB5B3E0071F509 /* ViewController.swift */,
+				754580DB1CEB5B3E0071F509 /* Main.storyboard */,
+				754580DE1CEB5B3E0071F509 /* Assets.xcassets */,
+				754580E01CEB5B3E0071F509 /* LaunchScreen.storyboard */,
+				754580E31CEB5B3E0071F509 /* Info.plist */,
+			);
+			path = ThreeCardMonty2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		754580D31CEB5B3E0071F509 /* ThreeCardMonty2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 754580E61CEB5B3E0071F509 /* Build configuration list for PBXNativeTarget "ThreeCardMonty2" */;
+			buildPhases = (
+				754580D01CEB5B3E0071F509 /* Sources */,
+				754580D11CEB5B3E0071F509 /* Frameworks */,
+				754580D21CEB5B3E0071F509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeCardMonty2;
+			productName = ThreeCardMonty2;
+			productReference = 754580D41CEB5B3E0071F509 /* ThreeCardMonty2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		754580CC1CEB5B3E0071F509 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Karl Pfister";
+				TargetAttributes = {
+					754580D31CEB5B3E0071F509 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 754580CF1CEB5B3E0071F509 /* Build configuration list for PBXProject "ThreeCardMonty2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 754580CB1CEB5B3E0071F509;
+			productRefGroup = 754580D51CEB5B3E0071F509 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				754580D31CEB5B3E0071F509 /* ThreeCardMonty2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		754580D21CEB5B3E0071F509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				754580E21CEB5B3E0071F509 /* LaunchScreen.storyboard in Resources */,
+				754580DF1CEB5B3E0071F509 /* Assets.xcassets in Resources */,
+				754580DD1CEB5B3E0071F509 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		754580D01CEB5B3E0071F509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				754580DA1CEB5B3E0071F509 /* ViewController.swift in Sources */,
+				754580D81CEB5B3E0071F509 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		754580DB1CEB5B3E0071F509 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				754580DC1CEB5B3E0071F509 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		754580E01CEB5B3E0071F509 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				754580E11CEB5B3E0071F509 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		754580E41CEB5B3E0071F509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		754580E51CEB5B3E0071F509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		754580E71CEB5B3E0071F509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThreeCardMonty2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wolf-s-Head-Labs.ThreeCardMonty2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		754580E81CEB5B3E0071F509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThreeCardMonty2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Wolf-s-Head-Labs.ThreeCardMonty2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		754580CF1CEB5B3E0071F509 /* Build configuration list for PBXProject "ThreeCardMonty2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				754580E41CEB5B3E0071F509 /* Debug */,
+				754580E51CEB5B3E0071F509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		754580E61CEB5B3E0071F509 /* Build configuration list for PBXNativeTarget "ThreeCardMonty2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				754580E71CEB5B3E0071F509 /* Debug */,
+				754580E81CEB5B3E0071F509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 754580CC1CEB5B3E0071F509 /* Project object */;
+}
