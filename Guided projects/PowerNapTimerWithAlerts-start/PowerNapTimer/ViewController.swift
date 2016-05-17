@@ -43,7 +43,7 @@ class ViewController: UIViewController{
         if timer.isOn {
             timer.stopTimer()
         } else {
-            timer.startTimer(20*60)
+            timer.startTimer(15)
         }
         setView()
     }
@@ -53,7 +53,13 @@ class ViewController: UIViewController{
     }
     
     func timerCompleted() {
-        self.setView()
+        let alertController = UIAlertController(title: "Wake Up!", message: "Time for DarkSouls", preferredStyle: .Alert)
+        let dismissAction = UIAlertAction(title: "You Died", style: .Default) { (_) in
+            self.setView()
+        }
+        alertController.addAction(dismissAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }
 

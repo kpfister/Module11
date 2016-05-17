@@ -32,7 +32,7 @@ class Timer: NSObject {
         if timeRemaining > 0 { // if timer is greater than zero then we can decrease the timer
             self.timeRemaining = timeRemaining - 1 // decreaseing the timer by 1 sec
             performSelector(#selector(Timer.secondTick), withObject: nil, afterDelay: 1)
-            // ^ this is from Objective C. Selector is where we call this method
+            // ^ this is from Objective C. We need this to have the timer use acutal seconds
             NSNotificationCenter.defaultCenter().postNotificationName("secondTick", object: nil)
         } else {
             self.timeRemaining = nil // If the timer is 0 set the time remaining to Nil
