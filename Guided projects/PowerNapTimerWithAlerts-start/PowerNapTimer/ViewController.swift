@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,TimerDelegate {
+class ViewController: UIViewController, TimerDelegate {
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -21,11 +21,7 @@ class ViewController: UIViewController,TimerDelegate {
         super.viewDidLoad()
         setView()
         resetTimer()
-        timer.delegate = self // This is telling timer it will be a delgate
-        
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timerSecondTick), name: "secondTick", object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timerCompleted), name: "timerCompleted", object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.setView), name: "timerStopped", object: nil)
+        timer.delegate = self
     }
     
     func setView() {
@@ -46,9 +42,8 @@ class ViewController: UIViewController,TimerDelegate {
         if timer.isOn {
             timer.stopTimer()
         } else {
-            timer.startTimer(15)
+            timer.startTimer(15.0)
             scheduleLocalNotification()
-            
         }
         setView()
     }
@@ -60,7 +55,7 @@ class ViewController: UIViewController,TimerDelegate {
         let notification = UILocalNotification()
         notification.fireDate = NSDate(timeIntervalSinceNow: timerTime)
         notification.alertTitle = "Time's up!"
-        notification.alertBody = "Ember up"
+        notification.alertBody = "It's time to wake up"
         notification.category = localNotificationTag
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
@@ -71,7 +66,7 @@ class ViewController: UIViewController,TimerDelegate {
             return
         }
         let timerLocalNotifications = localNotifications.filter({$0.category == localNotificationTag})
-        let notification in timerLocalNotifications {
+        for notification in timerLocalNotifications {
             UIApplication.sharedApplication().cancelLocalNotification(notification)
         }
     }
@@ -80,15 +75,11 @@ class ViewController: UIViewController,TimerDelegate {
         guard let localNotifications = UIApplication.sharedApplication().scheduledLocalNotifications else {
             return
         }
-        let timerLocalNotifications = localNotifications.last,
-        fireDate = timerNotification.fireDate.else {
-            return
+        let timerLocalNotifications = localNotifications.filter({$0.category == localNotificationTag})
+        guard let timerNotification = timerLocalNotifications.last,
+            fireDate = timerNotification.fireDate else {
+                return
         }
-        let timerLocalNotifications = localNotifications.filter({0.category == localNotificationTag})
-        guard Let timerNotification = timerLocalNotifications.last,
-        fireDate = timerNotification.fireDate else {
-            return
-    }
         timer.stopTimer()
         timer.startTimer(fireDate.timeIntervalSinceNow)
     }
@@ -98,8 +89,8 @@ class ViewController: UIViewController,TimerDelegate {
     }
     
     func timerCompleted() {
-        let alertController = UIAlertController(title: "Wake Up!", message: "Time for DarkSouls", preferredStyle: .Alert)
-        let dismissAction = UIAlertAction(title: "You Died", style: .Default) { (_) in
+        let alertController = UIAlertController(title: "Wake up!", message: "Get back to work", preferredStyle: .Alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .Default) { (_) in
             self.setView()
         }
         alertController.addAction(dismissAction)
@@ -107,12 +98,11 @@ class ViewController: UIViewController,TimerDelegate {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    //MARK: Timer Delegate method
-    
+    // MARK: - TimerDelegate methods
     
     func timerStopped() {
-        <#code#>
+        setView()
+        cancelLocalNotifications()
     }
-    
-  }
+}
 

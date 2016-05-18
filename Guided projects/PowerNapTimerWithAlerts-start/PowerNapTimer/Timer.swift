@@ -10,34 +10,33 @@ import UIKit
 
 class Timer: NSObject {
     
-    var timeRemaining: NSTimeInterval?// This is optional so it doesnt start unless the timer is started.
+    var timeRemaining: NSTimeInterval?
     
     var delegate: TimerDelegate?
     
-    var isOn: Bool { // This is a computed property
+    var isOn: Bool {
         if timeRemaining != nil {
-            return true // if time remaining is not equal to zer0 - its on
+            return true
         } else {
             return false
         }
     }
     
     func timeAsString() -> String {
-        let timeRemaining = Int(self.timeRemaining ?? 20*60) // ?? is nil coelsent. 20*60 is 20 mins.
-        let minutesLeft = timeRemaining / 60 //timeRemaining is in secs, so we devide by 60 to see min
-        let secondsLeft = timeRemaining - (minutesLeft*60) //This allows us to calulate the number of seonds
+        let timeRemaining = Int(self.timeRemaining ?? 20*60)
+        let minutesLeft = timeRemaining / 60
+        let secondsLeft = timeRemaining - (minutesLeft*60)
         return String(format: "%02d : %02d", arguments: [minutesLeft, secondsLeft])
-    }      // ^ this String is formating the clock to show our values.
+    }
 
-    @objc private func secondTick() { // everySecond this method is called
-        guard let timeRemaining = timeRemaining else {return} // checks if there is time remaining
-        if timeRemaining > 0 { // if timer is greater than zero then we can decrease the timer
-            self.timeRemaining = timeRemaining - 1 // decreaseing the timer by 1 sec
+    @objc private func secondTick() {
+        guard let timeRemaining = timeRemaining else {return}
+        if timeRemaining > 0 {
+            self.timeRemaining = timeRemaining - 1
             performSelector(#selector(Timer.secondTick), withObject: nil, afterDelay: 1)
-            // ^ this is from Objective C. We need this to have the timer use acutal seconds
             delegate?.timerSecondTick()
         } else {
-            self.timeRemaining = nil // If the timer is 0 set the time remaining to Nil
+            self.timeRemaining = nil
             delegate?.timerCompleted()
         }
     }
@@ -52,13 +51,17 @@ class Timer: NSObject {
     func stopTimer() {
         if isOn {
             timeRemaining = nil
-//            NSNotificationCenter.defaultCenter().postNotificationName("timerStopped", object: nil)
             delegate?.timerStopped()
         }
     }
 }
+
 protocol TimerDelegate {
     func timerSecondTick()
     func timerCompleted()
     func timerStopped()
 }
+
+
+
+
