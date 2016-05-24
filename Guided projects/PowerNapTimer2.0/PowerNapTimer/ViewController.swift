@@ -17,9 +17,11 @@ class ViewController: UIViewController, TimerDelegate {
     let timer = Timer()
     private let localNotificationTag = "timerNotification"
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        timer.delegate = self
         setView()
     }
     
@@ -41,7 +43,7 @@ class ViewController: UIViewController, TimerDelegate {
         if timer.isOn {
             timer.stopTimer()
         } else {
-            timer.startTimer(20*60.0)
+            timer.startTimer(5) // 20*60.0
         }
         setView()
     }
@@ -51,7 +53,26 @@ class ViewController: UIViewController, TimerDelegate {
     }
     
     func timerCompleted() {
-        setView()
+        var snoozeTextField: UITextField?
+        let alertController = UIAlertController(title: "Wake up!", message: "Bruh, sleep is for the weak", preferredStyle: .Alert)
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Would you like to sleep more?"
+            textField.keyboardType = .NumberPad
+        }
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .Cancel) { (_) in
+            self.setView()
+        }
+        let snoozeAction = UIAlertAction(title: "Snooze", style: .Default) { (_) in
+            guard let timeText = snoozeTextField?.text,
+                time = NSTimeInterval(timeText) else {
+                    return
+            }
+            self.timer.startTimer(time*60)
+            self.setView()
+        }
+        alertController.addAction(dismissAction)
+        alertController.addAction(snoozeAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     func timerStopped() {
